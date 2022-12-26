@@ -87,16 +87,19 @@ différents espaces
 version sans carte ni gestion des itinéraires automatique
 
 - espace admin 
-    gestion pts de collecte
-    ajout itinéraire "manuel" 
+
+    - gestion pts de collecte
+    - ajout itinéraire "manuel" 
 
 - espace collecteur 
-    vue des itinéraires qui lui sont affectés
-    vue sans carte des pts de collecte (infos sur chaque pt)
-    saisie des infos de collecte quand il fait l'itinéraire
+
+    - vue des itinéraires qui lui sont affectés
+    - vue sans carte des pts de collecte (infos sur chaque pt)
+    - saisie des infos de collecte quand il fait l'itinéraire
 
 - espace client
-    vue des informations relatives à la collecte de ses points
+
+    - vue des informations relatives à la collecte de ses points
 
 ## évaluation tps projet complet/coût 
 
@@ -110,7 +113,6 @@ la partie difficile du projet: la gestion des itinéraires si on veut faire ça 
 ### cout de fabrication
 
 à définir après les avis sur une ébauche/1ere version simplifiée ? 
-
 
 ### cout de fonctionnement  
 

@@ -4,7 +4,7 @@
 
 - collecte des bacs de déchets (2 à 10 par pts) dans des pts de collecte (~ 250, peut monter vite) à des clients  
 - pts de collecte dans sté-métropole avec camion de capacité 20 bacs     
-- collecte périodique (~1fois par semaine/mois) ou non (clients fonctionnent à l'appel) selon les points  
+- collecte périodique (~1fois par semaine/mois) (FREQUENCE VARIABLE JUSQU'A (clients fonctionnent à l'appel) selon les points)
 
 l'entreprise doit
 
@@ -13,7 +13,7 @@ l'entreprise doit
     intégrer les appels des clients "ponctuels" dans les itinéraires prévus
 
     2 - relation client/facturation
-    rendre des comptes au client (poids des déchets collectés, nb de bacs, heure de la collecte ...)
+    rendre des comptes au client (poids des déchets collectés, nb de bacs, heure de la collecte, MATERIELS DEPOSES...)
     facturer aux clients en fonction des collectes
 
     3 - intégration personnel/évolution
@@ -37,18 +37,18 @@ via plateforme (site internet + appli android/ios ?)
 
 - en parcourant un itinéraire, le collecteur 
 
-    - rentre les infos (nb de bacs, poids, heure de passage ...) pour chaque pt de collecte traité
+    - rentre les infos (nb de bacs, poids, DEPOSER DU MATERIELS (CATEGORIE DE SACS, FUT, SUPPORT DE FUT, heure de passage(AUTOMATIQUE AVEC LE SHEET PR LE MOMENT), ...) pour chaque pt de collecte traité
     
-    - a les infos nécessaires à la collecte pour chaque pt (loc précise, code d'accès, tips/notes à savoir)
+    - a les infos nécessaires à la collecte pour chaque pt (loc précise, code d'accès,CONTRAINTE HORAIRE tips/notes à savoir)
 
     - a la fin de son parcours, si camion pas plein
-        -> recherche de pts de collecte proche
+        -> recherche de pts de collecte proche (DANS UN PETIT PERIMETRE et qui REPOND AU CONTRAINTE)
 
-- chaque client a accès à un espace où il peut voir les infos de ses pts de collecte 
+- chaque client a accès à un espace où il peut voir les infos de ses pts de collecte (HEURE DE COLLECTE, POIDS, MATERIELS DEPOSES)
 
-- client peut requêter une collecte "ponctuelle" et la solution indique en cb de tps la collecte est possible
+- client peut requêter une collecte "ponctuelle" et la solution indique en cb de tps la collecte est possible (DANS L'IDEE UN APPEL LE MATIN COLLECTE DANS LES 48H - UN APREM OU FIN DE SEMAINE DANS LES 72H)
 
-- génération des factures à partir des données des collectes
+- génération des factures à partir des données des collectes - POUR LE MOMENT RENE FONCTIONNE AVEC LE SHEET QUE JE TAI ENVOYe SUR MESSENGER - IL PREND CODE CLIENT ET GENERE UNE FACTURE DE CELUI-CI)
 
 - gestion de la périodicité (ou non) des pts de collecte et ajout dynamique aux itinéraires
 
@@ -71,6 +71,7 @@ différents espaces
 
 - visualisation des infos sur les collectes des pts qui lui appartiennent
 - requête d'une collecte ponctuelel
+- AFFICHAGE DE L'ORGANIGRAMME DE L'EQUIPE ET NUMERO DE TEL / MAIL EN FONCTION DES PERSONNES QUILS ONT AUSSI BESOIN DE JOINDRE
 
 ### espace collecteur
     
@@ -127,7 +128,7 @@ la partie difficile du projet: la gestion des itinéraires si on veut faire ça 
 
 ## questions 
     
-- extrait de la sheet avec laquelle vous travaillez actuellement ? 
-- comment se passe explication a un nveau "collecteur" ? 
-- raisonnable de penser que le collecteur a accès à internet tout au long de la collecte ? 
+- extrait de la sheet avec laquelle vous travaillez actuellement ? AUCUNE IDEE PR CA....
+- comment se passe explication a un nveau "collecteur" ? DEMONSTRATION ET TEMPS DE FORMATION AVEC LUI MEME SI C'EST UN NOVICE
+- raisonnable de penser que le collecteur a accès à internet tout au long de la collecte ? OUI JE PENSE AC LES TELEPHONES.....
 - oubli et choses à ajouter ? 

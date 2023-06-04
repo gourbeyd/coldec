@@ -43,6 +43,7 @@ Système proposé pour pas que ce soit contraignant de créer un compte:
 <p align="center">
   <img src="img/maquetteAppliItineraires.png">
 </p>
+
 - Page d'accueil pour un employé qui se connecte ou est connecté.
 - Vue des itinéraires qui lui sont affectées sous forme de liste déroulante, triés par date à laquelle la tournée doit être effectuée. 
 - En appuyant sur la flèche, on voit les points de collecte qui font partie de la tournée. 

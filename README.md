@@ -1,134 +1,70 @@
-# Notes coldec 
+Proposition de maquettes des différents composants:
 
-## contexte 
+Petite réflexion sur ce à quoi ca pourrait ressembler de mon point de vue, avant de commencer à développer. 
 
-- collecte des bacs de déchets (2 à 10 par pts) dans des pts de collecte (~ 250, peut monter vite) à des clients  
-- pts de collecte dans sté-métropole avec camion de capacité 20 bacs     
-- collecte périodique (~1fois par semaine/mois) (FREQUENCE VARIABLE JUSQU'A (clients fonctionnent à l'appel) selon les points)
+# Site web Client
 
-l'entreprise doit
+![](img/maquetteClient.png)
 
-    1 - itinéraire
-    effectuer des itinéraires (définis par journée) pour la collecte (le + logiquement/rapidement possible)
-    intégrer les appels des clients "ponctuels" dans les itinéraires prévus
+L'idée c'est de faire quelque chose de sobre, peut-être ajouter un logo ? 
 
-    2 - relation client/facturation
-    rendre des comptes au client (poids des déchets collectés, nb de bacs, heure de la collecte, MATERIELS DEPOSES...)
-    facturer aux clients en fonction des collectes
+- Bandeau Supérieur:
+    - possibilité de cliquer sur nous contacter pour avoir accès à l'organigramme et aux méthodes de contact. 
 
-    3 - intégration personnel/évolution
-    composer avec nveaux personnels qui ne connait pas les pts de colelcte (clefs, codes batiments, localisation précise)
+- Historique des collectes: 
 
-solution actuelle:
+    - L'idée c'est d'avoir un tableau où on peut étendre les lignes pour voir le contenu de la collecte. C'était surtout pour valider ca, on fera qqch de + plus beau dans le contenu d'une collecte. 
+    - on pourra aussi facilement trier sur les dates, faire des recherches sur le contenu etc. 
 
-    1- travail de planification (humain via connaissance des pts de collecte + gestion appels)
-    2- google sheets / form + mail envoyé manuellement au client
-    3- formation nveau personnel
+# Site web Administration
 
-## fonctionnalités envisagées
+todo
 
-via plateforme (site internet + appli android/ios ?)
+# Application mobile pour les Collecteurs
 
-- accès liste des pts de collecte (visualisation carte & liste)
+Appli Collecteur -> utilisée par le collecteur qui part en tournée. 
 
-- création d'un itinéraire à partir de la carte
+## Page de connexion à l'application
 
-- possibilité d'affecter un itinéraire à un "collecteur"
-
-- en parcourant un itinéraire, le collecteur 
-
-    - rentre les infos (nb de bacs, poids, DEPOSER DU MATERIELS (CATEGORIE DE SACS, FUT, SUPPORT DE FUT, heure de passage(AUTOMATIQUE AVEC LE SHEET PR LE MOMENT), ...) pour chaque pt de collecte traité
-    
-    - a les infos nécessaires à la collecte pour chaque pt (loc précise, code d'accès,CONTRAINTE HORAIRE tips/notes à savoir)
-
-    - a la fin de son parcours, si camion pas plein
-        -> recherche de pts de collecte proche (DANS UN PETIT PERIMETRE et qui REPOND AU CONTRAINTE)
-
-- chaque client a accès à un espace où il peut voir les infos de ses pts de collecte (HEURE DE COLLECTE, POIDS, MATERIELS DEPOSES)
-
-- client peut requêter une collecte "ponctuelle" et la solution indique en cb de tps la collecte est possible (DANS L'IDEE UN APPEL LE MATIN COLLECTE DANS LES 48H - UN APREM OU FIN DE SEMAINE DANS LES 72H)
-
-- génération des factures à partir des données des collectes - POUR LE MOMENT RENE FONCTIONNE AVEC LE SHEET QUE JE TAI ENVOYe SUR MESSENGER - IL PREND CODE CLIENT ET GENERE UNE FACTURE DE CELUI-CI)
-
-- gestion de la périodicité (ou non) des pts de collecte et ajout dynamique aux itinéraires
-
-## organisation de la solution
-
-différents espaces
-
-### espace "administration"
-
-- gestion des pts de collecte
-    - ajout/suppression/modification
-
-- gestion des itinéraires
-    -  création/modification/suppression à partir d'une carte
-    - création/modification "automatique" ? 
-
-- génération de rapport/facture
-
-### espace client
-
-- visualisation des infos sur les collectes des pts qui lui appartiennent
-- requête d'une collecte ponctuelel
-- AFFICHAGE DE L'ORGANIGRAMME DE L'EQUIPE ET NUMERO DE TEL / MAIL EN FONCTION DES PERSONNES QUILS ONT AUSSI BESOIN DE JOINDRE
-
-### espace collecteur
-    
-- visualisation des itinéraires à parcourir  
-        point sur carte
-
-- accès aux infos de chaque pt de collecte
-- saisie des infos concernant la collecte
-- recherche pt a proximité
-    
-
-## ébauche possible rapide (~1/2 mois)
-
-version sans carte ni gestion des itinéraires automatique
-
-- espace admin 
-
-    - gestion pts de collecte
-    - ajout itinéraire "manuel" 
-
-- espace collecteur 
-
-    - vue des itinéraires qui lui sont affectés
-    - vue sans carte des pts de collecte (infos sur chaque pt)
-    - saisie des infos de collecte quand il fait l'itinéraire
-
-- espace client
-
-    - vue des informations relatives à la collecte de ses points
-
-## évaluation tps projet complet/coût 
-
-### temps 
-
-version simplifiée faisable en 1/2 mois
-
-la partie difficile du projet: la gestion des itinéraires si on veut faire ça avec un algo dynamiquement qui prendrait en compte la périodicité, les appels des clients pour les collectes "ponctuelles"
+![](img/maquetteAppliConnexion.png)
 
 
-### cout de fabrication
+Système proposé pour pas que ce soit contraignant de créer un compte: 
 
-à définir après les avis sur une ébauche/1ere version simplifiée ? 
+- Sur la page administration du site, possibilité d'ajout un employé et de définir son mot de passe par défaut. 
+- L'employé se connecte avec son email et son mot de passe (qu'il peut changer ensuite à l'insu de l'administrateur). 
 
-### cout de fonctionnement  
+## Vue Itinéraires
 
-- serveur pour héberger le site + stockage des infos 
-     
-    <1k€/an, même <200€ à mon avis mais soyons prudents j'ai peut etre pas tout en tête
+![](img/maquetteAppliItineraires.png)
 
-- maintien en condition, gestion des bugs
+- Page d'accueil pour un employé qui se connecte ou est connecté.
+- Vue des itinéraires qui lui sont affectées sous forme de liste déroulante, triés par date à laquelle la tournée doit être effectuée. 
+- En appuyant sur la flèche, on voit les points de collecte qui font partie de la tournée. 
+- Menu en bas permettant de switcher entre les vues itinéraires (celle-ci) ou paramètres (permettant a priori seulement de voir en tant que qui on est connectés et se déconnecter). 
 
-    dur à définir à l'avance mais rien ne semble instable a priori
- 
+Code couleur (mis un peu au hasard) 
+- vert: collecté
+- orange sombre: zappé ou pb à la collecte  
+- gris: à collecter
 
-## questions 
-    
-- extrait de la sheet avec laquelle vous travaillez actuellement ? AUCUNE IDEE PR CA....
-- comment se passe explication a un nveau "collecteur" ? DEMONSTRATION ET TEMPS DE FORMATION AVEC LUI MEME SI C'EST UN NOVICE
-- raisonnable de penser que le collecteur a accès à internet tout au long de la collecte ? OUI JE PENSE AC LES TELEPHONES.....
-- oubli et choses à ajouter ? 
+L'idée est de pouvoir cliquer sur le point de collecte dans la liste d'un itinéraire pour arriver à la page de collecte et remplir les informations.
+
+## Vue Collecte d'un point
+
+![](img/maquetteAppliCollecte.png)
+
+- Flèches en haut pour passer au point de collecte précédent/suivant dans la collecte. (ou swipe)
+
+- Partie Infos:
+
+    - Afficher les infos principales sur le point de collecte (code client, adresse, plage horaire, toutes les informations que l'on veut) 
+    - lien vers google maps (ou autre système de navigation) pour faire l'itinéraire. 
+
+- Partie Collecte
+
+    - Reprise du google forms (volontairement incomplet sur la maquette) 
+    - Bouton valider pour soumettre les informations de la collecte (les informations sur la date, le collecteur peuvent être automatiques)
+
+- Menu Itinéraires/Paramètres toujours présent.  
+

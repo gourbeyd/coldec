@@ -4,7 +4,9 @@ Petite réflexion sur ce à quoi ca pourrait ressembler de mon point de vue, ava
 
 # Site web Client
 
-![](img/maquetteClient.png)
+<p align="center">
+  <img src="img/maquetteClient.png">
+</p>
 
 L'idée c'est de faire quelque chose de sobre, peut-être ajouter un logo ? 
 
@@ -26,7 +28,9 @@ Appli Collecteur -> utilisée par le collecteur qui part en tournée.
 
 ## Page de connexion à l'application
 
-![](img/maquetteAppliConnexion.png)
+<p align="center">
+  <img src="img/maquetteAppliConnexion.png">
+</p>
 
 
 Système proposé pour pas que ce soit contraignant de créer un compte: 
@@ -36,8 +40,9 @@ Système proposé pour pas que ce soit contraignant de créer un compte:
 
 ## Vue Itinéraires
 
-![](img/maquetteAppliItineraires.png)
-
+<p align="center">
+  <img src="img/maquetteAppliItineraires.png">
+</p>
 - Page d'accueil pour un employé qui se connecte ou est connecté.
 - Vue des itinéraires qui lui sont affectées sous forme de liste déroulante, triés par date à laquelle la tournée doit être effectuée. 
 - En appuyant sur la flèche, on voit les points de collecte qui font partie de la tournée. 
@@ -52,7 +57,9 @@ L'idée est de pouvoir cliquer sur le point de collecte dans la liste d'un itin�
 
 ## Vue Collecte d'un point
 
-![](img/maquetteAppliCollecte.png)
+<p align="center">
+  <img src="img/maquetteAppliCollecte.png">
+</p>
 
 - Flèches en haut pour passer au point de collecte précédent/suivant dans la collecte. (ou swipe)
 
